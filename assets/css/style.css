@@ -120,6 +120,7 @@ body {
   height: 50px;
   border-radius: 50%;
   background: var(--themes) center 100%/cover no-repeat;
+  opacity: .5;
 
 }
 #nav {
