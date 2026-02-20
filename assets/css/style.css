@@ -121,7 +121,7 @@ body {
   border-radius: 50%;
   background: var(--themes) center 100%/cover no-repeat;
   opacity: .5;
-
+  cursor: pointer;
 }
 #nav {
     padding-left: 10px;
@@ -193,6 +193,7 @@ body {
 #heroImg img {
   width: 100%;
   border-radius: 24px;
+  outline: 3px solid var(--accent);
 }
 #heroInfo {
   flex: 1;
@@ -200,7 +201,12 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-#heroInfo p:nth-child(1) {font-family: fustat; font-weight: bolder;}
+#heroInfo p:nth-child(1) {
+  font-family: fustat; 
+  font-weight: bolder; 
+  background-image: linear-gradient(to bottom left, var(--text), var(--accent)); 
+  background-clip: text; 
+  color: transparent;}
   
 #heroInfo p:nth-child(2) {opacity: .5;}
 #heroInfo p:nth-child(3) {font-family: rakkas; font-weight: normal; margin-top: 2rem;}
@@ -217,20 +223,34 @@ body {
   padding: 120px 0 48px 0;
   align-items: center;
 }
+.aboutMr_kareem {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  gap: 32px;
+}
+.aboutMr_kareem .aboutImg {
+  flex: 1;
+}
+.aboutImg img {
+  width: 100%;
+  border-radius: 32px;
+  outline: 3px solid var(--accent);
+}
 .section .subheader {
   margin-bottom: 72px;
   color: var(--accent);
 }
-#about p:nth-child(2) {width: 90%; opacity: .7;}
+#about .aboutMr_kareem p:nth-child(1) {flex: 2; opacity: .7; padding: 0 32px;}
 /* whyUs */
 #whyUs {
   scroll-margin-top: 80px;
-  background-color: var(--text);
+  background: url(../imgs/bg.jpg) center;
   margin-top: 120px;
   padding-bottom: 48px;
 }
 #whyUs p {
-  color: var(--background);
+  color: #fff;
 }
 #whyUs .benefit {
   width: var(--width);
@@ -242,6 +262,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0 48px;
+  border: 2px solid var(--text);
 }
 #whyUs .benefit:nth-child(2) {
   width: var(--height);
@@ -337,7 +358,6 @@ body {
 #contact .subheader {
   margin-bottom: 16px;
 }
-
 .phone {
   font-size: 1.5rem;
   opacity: .7;
@@ -383,6 +403,9 @@ body {
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
+  }
+  .aboutMr_kareem {
+    flex-direction: column-reverse;
   }
   #heroInfo .btn {margin: 1rem auto 0 auto ;}
   #heroImg {width: 80%;}
